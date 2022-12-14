@@ -1,0 +1,98 @@
+{% extends 'layout.html'%}
+
+{%block title %} Home {% endblock %}
+
+{%block content %}
+<div class="container-fluid p-0">
+    <div id="header-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="{{ url_for('static', filename='img/wisata1.jpg') }}" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h4 class="text-white text-uppercase mb-md-3">Tours</h4>
+                        <h1 class="display-3 text-white mb-md-4">Let's Explore The Nation's Capital</h1>
+                        <a href="{{url_for ('destination')}}" class="btn btn-primary py-md-3 px-md-5 mt-2">TRAVELER</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid py-3">
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-lg-6" style="min-height: 500px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100" src="{{ url_for('static', filename='img/about.jpg') }}" style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-lg-6 pt-5 pb-lg-5">
+                <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                    <h1 class="text-primary text-uppercase" style="letter-spacing: 5px;">About Us</h1>
+                    <h6 class="mb-3"><p>
+                        Sebuah aplikasi pendampingan wisata berbasis AI untuk pemantauan dan pemanduan wisatawan selama berjelajah di aplikasi yang kami buat.
+                        Aplikasi ini dibuat oleh kelompok local pride dari kelas Al-Jazari di Orbit Future Academy.
+                    </p>
+                    <div class="row mb-4">
+                        <div class="col-6">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/wisata2.jpg') }}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <!-- Footer Start-->
+    <div class="footer-area footer-bg footer-padding">
+        <div class="container">
+            <div class="row footer-wejed justify-content-between">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                    <div class="footer-logo mb-20">
+                        <a href="{{url_for ('about')}}"><img src="{{ url_for('static', filename='img/footer1.png' ) }}"></a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                    <div class="footer-logo mb-20">
+                        <a href="{{url_for ('about')}}"><img src="{{ url_for('static', filename='img/Logo-KampusMerdeka.jpeg' ) }}"></a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                    <div class="footer-logo mb-20">
+                        <a href="{{url_for ('about')}}"><img src="{{ url_for('static', filename='img/footer1.png' ) }}"></a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                    <div class="footer-logo mb-20">
+                        <a href="{{url_for ('about')}}"><img src="{{ url_for('static', filename='img/Logo-KampusMerdeka.jpeg' ) }}"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer-bottom area -->
+    <div class="footer-bottom-area footer-bg">
+        <div class="container">
+            <div class="footer-border">
+                <div class="row d-flex justify-content-between align-items-center">
+                    <div class="col-xl-10 col-lg-10 ">
+                        <div class="footer-copy-right">
+                            <p>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | TIM
+                                Local Pride 
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End-->
+</footer>
+{% endblock %}
